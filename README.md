@@ -2,9 +2,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+```
+Setup environtment :
+
+You need to install node js latest version or (10)
+```
+
 First, run the development server:
 
 ```bash
+npm install (run once after clone)
+
+for run development mode
+
 npm run dev
 # or
 yarn dev
