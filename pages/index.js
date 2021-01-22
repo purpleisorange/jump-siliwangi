@@ -1,69 +1,74 @@
-import Head from 'next/head'
-import { useState } from 'react'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link';
 
-export default function Home() {
+function Home() {
+    return (
+      <div className = "container">
 
-  const [halo, ds] = useState('Halo Next')
+        {/*Navbar*/}
+        
+        <nav>
+          <Link href="/">
+            <a className = "logo"><img src = "/Logo.svg" alt="LasslesVPN"></img></a></Link>
+              <ul className ="nav-links">
+                <li><Link href = "/"><a>About</a></Link></li>
+                <li><Link href = "/"><a>Features</a></Link></li>
+                <li><Link href = "/"><a>Pricing</a></Link></li>
+                <li><Link href = "/"><a>Testimonials</a></Link></li>
+                <li><Link href = "/"><a>Help</a></Link></li>
+              </ul>
+              <div className = "nav-links-cta">
+                <Link href = "/"><a className = "link-sm">Sign In</a></Link>
+                <button className = "cta-red">Sign Up</button>
+              </div>
+        </nav>
+        
+        {/*Hero*/}
 
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>{halo}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to {halo} <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+        <section className = "hero">
+          <div className = "column-text-heading">
+            <h1 className = "hero-heading">Want anything to be <br></br> easy with <span >LaslesVPN.</span></h1>
+            <p className = "text-p">
+            Provide a network for all your needs with ease and fun using <strong>LaslesVPN</strong> <br></br>discover interesting features from us.
             </p>
-          </a>
-        </div>
-      </main>
+            <button className = "btn-secondary">Get Started</button>
+          </div>
+          <div>
+            <img className = "illustration-hero" src = "/illust.png"></img>
+          </div>
+        </section>
+        
+        {/*Features*/}
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+        <section className = "features">
+          <div className = "row-column">
+            <div className = "column">
+              <img src="/user.png"></img>
+              <div className = "text-col">
+                <h1>90+</h1>
+                <p>Users</p>
+              </div>
+              <img src = "/gap.png"></img>
+            </div>
+            <div className = "column">
+              <img src="/location.png"></img>
+              <div className = "text-col">
+                <h1>30+</h1>
+                <p>Locations</p>
+              </div>
+              <img src = "/gap.png"></img>
+            </div>
+            <div className = "column">
+              <img src="/server.png"></img>
+              <div className = "text-col">
+                <h1>50+</h1>
+                <p>Servers</p>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>   
+    )
+  }
+
+export default Home;
