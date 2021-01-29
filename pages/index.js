@@ -1,11 +1,7 @@
-import Head from 'next/head'
-import { useState } from 'react'
+
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-
-  const [halo, ds] = useState('Halo Next')
-
   return (
     <div className={styles.template}>
       <header>
@@ -38,7 +34,7 @@ export default function Home() {
               <button className={styles.btn} type="button"> Get Started </button>
             </div>
             <div className={styles.aboutRight}>
-              <img className={styles.img} src="/Illustration1.png" alt="Illustration1"></img>
+              <img src="/Illustration1.png" alt="Illustration1"></img>
             </div>
           </div>
         </div>
@@ -47,7 +43,27 @@ export default function Home() {
       <main>
         <div className={styles.container} id="features">
           <div className={styles.detailWrap}>
-
+            <div className={styles.users}>
+              <img src="/user.png"></img>
+              <div>
+              <h1>90+</h1>
+              <p>Users</p>
+              </div>
+            </div>
+            <div className={styles.locations}>
+              <img src="/location.png"></img>
+              <div>
+              <h1>30+</h1>
+              <p>Locations</p>
+              </div>
+            </div>
+            <div className={styles.server}>
+              <img src="/Server.png"></img>
+              <div>
+              <h1>50+</h1>
+              <p>Server</p>
+              </div>
+            </div>
           </div>
           <div className={styles.featuresWrap}>
             <div className={styles.featuresLeft}>
@@ -122,13 +138,13 @@ export default function Home() {
           <p>
             See <span>LaslesVPN</span> everywhere to make it easier for you when you move locations.
           </p>
-          <img src="/hugeglobal.svg"></img>
+          <img className={styles.imgGlobal} src="/hugeglobal.svg"></img>
           <ul>
-            <li><img src="/netflix.png"></img></li>
-            <li><img src="/reddit.png"></img></li>
-            <li><img src="/amazon.png"></img></li>
-            <li><img src="/discord.png"></img></li>
-            <li><img src="/spotify.png"></img></li>
+            <li><img className={styles.imgTesti} src="/netflix.png"></img></li>
+            <li><img className={styles.imgTesti} src="/reddit.png"></img></li>
+            <li><img className={styles.imgTesti} src="/amazon.png"></img></li>
+            <li><img className={styles.imgTesti} src="/discord.png"></img></li>
+            <li><img className={styles.imgTesti} src="/spotify.png"></img></li>
           </ul>
         </div>
         
@@ -157,7 +173,51 @@ export default function Home() {
       </main>
 
       <footer>
-
+        <div className={styles.footerWrap}>
+          <div className={styles.footerAbout}>
+            <img src="/Logo.png"></img>
+            <h1>
+              <span>LaslesVPN</span> is a private virtual network that has unique features and has high security.
+            </h1>
+            <ul>
+              <li><img src="/Facebook.png"></img></li>
+              <li><img src="/Twitter.png"></img></li>
+              <li><img src="/Instagram.png"></img></li>
+            </ul>
+            <p>
+              ©2020Lasles<span>VPN</span>
+            </p>
+          </div>
+          <div className={styles.footerProduct}>
+            <h1>
+              Product
+            </h1>
+            <p>Download</p>
+            <p>Pricing</p>
+            <p>Locations</p>
+            <p>Server</p>
+            <p>Countries</p>
+            <p>Blog</p>
+          </div>
+          <div className={styles.footerEngage}>
+            <h1>
+              Engage
+            </h1>
+            <p>LaslesVPN ?</p>
+            <p>FAQ</p>
+            <p>Tutorial</p>
+            <p>About Us</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+          </div>
+          <div className={styles.footerEarn}>
+            <h1>
+              Earn Money
+            </h1>
+            <p>Affiliate</p>
+            <p>Become Partner</p>
+          </div>
+        </div>
       </footer>
     </div>
   )
