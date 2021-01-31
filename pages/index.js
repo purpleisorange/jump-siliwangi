@@ -1,164 +1,277 @@
 
+import Head from 'next/head'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
-
 export default function Home() {
+
+  const [halo, ds] = useState('LaslesVPN')
+
   return (
-    <div className={styles.template}>
-      <header>
-        <div className={styles.headerWrap}>
-          <div className={styles.headerLeft}>
-            <img src="/Logo.png"></img>
+    <div className={styles.container}>
+      <Head>
+        <title>{halo}</title>
+        <link rel="icon" href="/headLogo.png" />
+      </Head>
+      <nav className={styles.nav}>
+        <ul>
+          <img src="/Logo.png"></img>
+          <li>About</li>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Testimonials</li>
+          <li>Help</li>
+          <li className={styles.signIn}>Sign In</li>
+          <button className={styles.signUp} type="button">Sign Up</button>
+        </ul>
+      </nav>
+      <div className={styles.wrap}>
+        <div className={styles.about}>
+          <div className={styles.aboutLeft}>
+            <h1>
+              Want anything to be easy with <span>LaslesVPN.</span>
+            </h1>
+            <p>
+              Provide a network for all your needs with ease and fun using <span>LaslesVPN</span> discover interesting features from us.
+            </p>
+            <button className={styles.btn} type="button"> Get Started </button>
           </div>
-          <div className={styles.headerRight}>
-            <a href="#about">About</a>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#help">Help</a>
-            <button className={styles.SignIn} type="button">Sign In</button>
-            <button className={styles.SignUp} type="button">Sign Up</button>
-          </div>
-        </div>
-      </header>
-
-      <section>
-        <div className={styles.container} id="about">
-          <div className={styles.aboutWrap}>  
-            <div className={styles.aboutLeft}>
-              <h1>
-                Want anything to be easy with <span>LaslesVPN.</span>
-              </h1>
-              <p>
-                Provide a network for all your needs with ease and fun using <span>LaslesVPN</span> discover interesting features from us.
-              </p>
-              <button className={styles.btn} type="button"> Get Started </button>
-            </div>
-            <div className={styles.aboutRight}>
-              <img src="/Illustration1.png" alt="Illustration1"></img>
-            </div>
+          <div className={styles.aboutRight}>
+            <img src="/Illustration1.png" alt="Illustration1"></img>
           </div>
         </div>
-      </section>
-
-      <main>
-        <div className={styles.container} id="features">
-          <div className={styles.detailWrap}>
-            <div className={styles.users}>
+        <div className={styles.aboutDetail}>
+          <div className={styles.users}>
+            <div>
               <img src="/user.png"></img>
-              <div>
+            </div>
+            <div>
               <h1>90+</h1>
               <p>Users</p>
-              </div>
             </div>
-            <div className={styles.locations}>
+          </div>
+          <div className={styles.locations}>
+            <div>
               <img src="/location.png"></img>
-              <div>
-              <h1>30+</h1>
-              <p>Locations</p>
-              </div>
             </div>
-            <div className={styles.server}>
+            <div>
+              <h1>30+</h1>
+              <p>Locatios</p>
+            </div>
+          </div>
+          <div className={styles.servers}>
+            <div>
               <img src="/Server.png"></img>
-              <div>
+            </div>
+            <div>
               <h1>50+</h1>
               <p>Server</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.features}>
+          <div className={styles.featuresLeft}>
+            <img src="/Illustration2.png"></img>
+          </div>
+          <div className={styles.featuresRight}>
+            <h1>
+                We Provide Many Features You Can Use
+            </h1>
+            <p>
+                You can explore the feature thah we provide with fun and heva their own functions each feature.
+            </p>
+            <div className={styles.featuresDetail}>
+              <div>
+                <img src="/group.png"></img>
+                <img src="/group.png"></img>
+                <img src="/group.png"></img>
+                <img src="/group.png"></img>
+              </div>
+              <div>
+                <p>Powerfull online protection.</p>
+                <p>Internet without borders.</p>
+                <p>Supercharged VPN.</p>
+                <p>No specific time limits.</p>
               </div>
             </div>
           </div>
-          <div className={styles.featuresWrap}>
-            <div className={styles.featuresLeft}>
-              <img src="/Illustration2.png"></img>
-            </div>
-            <div className={styles.featuresRight}>
-              <h1>
-                We Provide Many Features You Can Use
-              </h1>
-              <p>
-                You can explore the feature thah we provide with fun and heva their own functions each feature.
-              </p>
-              <ul>
-                <li> Powerfull online protection.</li>
-                <li> Internet without border.</li>
-                <li> Supercharger VPN.</li>
-                <li> No specific time limits.</li>
-              </ul>
-            </div>
-          </div>
         </div>
-        <div className={styles.pricingWrap} id="pricing">
-          <h1>Choose Your Plan</h1>
-          <p>Lets's choose the package that is best for you and explore it happily and cheerfully.</p>
+      </div>
 
-          <div className={styles.pricing}>
-            <div>
-              <img src="/Free.png"></img>
-              <h1>Free Plan</h1>
-              <ul>
-                <li> Unlimites Bandwitch</li>
-                <li> Encrypted Connection</li>
-                <li> No Traffic Logs</li>
-                <li> Works on All Devices</li>
-              </ul>
-              <h2>Free</h2>
-              <button type="button">Select</button>
+      <main className={styles.wrapMain}>
+        <h1>
+          Choose Your Plan
+        </h1>
+        <p>
+          Lets's choose the package that is best for you and explore it happily and cheerfully.
+        </p>
+        <div className={styles.pricing}>
+          <div className={styles.pricingFree}>
+            <img src="/Free.png"></img>
+            <h1>Free Plan</h1>
+            <div className={styles.pricingFreeDetail}>
+              <div className={styles.pricingFreeImg}>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+              </div>
+              <div className={styles.pricingFreeP}>
+                <p>Unlimites Bandwitch</p>
+                <p>Encrypted Connection</p>
+                <p>No Traffic Logs</p>
+                <p>Works on All Devices</p>
+              </div>
             </div>
-            <div>
-              <img src="/Free.png"></img>
-              <h1>Standart Plan</h1>
-              <ul>
-                <li> Unlimites Bandwitch</li>
-                <li> Encrypted Connection</li>
-                <li> Yes Traffic Logs</li>
-                <li> Works on All Devices</li>
-                <li> Connect Anyware</li>
-              </ul>
-              <h2>$9 / mo</h2>
-              <button type="button">Select</button>
+            <h2>Free</h2>
+            <button type="button">Select</button>
+          </div>
+          <div className={styles.pricingStandard}>
+            <img src="/Free.png"></img>
+            <h1>Standard Plan</h1>
+            <div className={styles.pricingStandardDetail}>
+              <div className={styles.pricingStandardImg}>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+              </div>
+              <div className={styles.pricingStandardP}>
+                <p>Unlimites Bandwitch</p>
+                <p>Encrypted Connection</p>
+                <p>Yes Traffic Logs</p>
+                <p>Works on All Devices</p>
+                <p>Connect Anyware</p>
+              </div>
             </div>
-            <div>
-              <img src="/Free.png"></img>
-              <h1>Premium Plan</h1>
-              <ul>
-                <li> Unlimites Bandwitch</li>
-                <li> Encrypted Connection</li>
-                <li> Yes Traffic Logs</li>
-                <li> Works on All Devices</li>
-                <li> Connect Anyware</li>
-                <li> Get New Features</li>
-              </ul>
-              <h2>$12 / mo</h2>
-              <button type="button">Select</button>
+            <h2><span>$9</span> / mo</h2>
+            <button type="button">Select</button>
+          </div>
+          <div className={styles.pricingPremium}>
+            <img src="/Free.png"></img>
+            <h1>Premium Plan</h1>
+            <div className={styles.pricingPremiumDetail}>
+              <div className={styles.pricingPremiumImg}>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+                <img src="/checklist.png"></img>
+              </div>
+              <div className={styles.pricingPremiumP}>
+                <p>Unlimites Bandwitch</p>
+                <p>Encrypted Connection</p>
+                <p>Yes Traffic Logs</p>
+                <p>Works on All Devices</p>
+                <p>Connect Anyware</p>
+                <p>Get New Features</p>
+              </div>
             </div>
+            <h2><span>$12</span> / mo</h2>
+            <button className={styles.btnPremium} type="button">Select</button>
           </div>
         </div>
-        <div className={styles.testimonialsWrap} id="testimonials">
-          <h1>
-            Huge Global Network of Fast VPN
-          </h1>
-          <p>
-            See <span>LaslesVPN</span> everywhere to make it easier for you when you move locations.
-          </p>
-          <img className={styles.imgGlobal} src="/hugeglobal.svg"></img>
-          <ul>
-            <li><img className={styles.imgTesti} src="/netflix.png"></img></li>
-            <li><img className={styles.imgTesti} src="/reddit.png"></img></li>
-            <li><img className={styles.imgTesti} src="/amazon.png"></img></li>
-            <li><img className={styles.imgTesti} src="/discord.png"></img></li>
-            <li><img className={styles.imgTesti} src="/spotify.png"></img></li>
-          </ul>
+        <h1>
+          Huge Global Network of Fast VPN
+        </h1>
+        <p>
+          See <span>LaslesVPN</span> everywhere to make it easier for you when you move locations.
+        </p>
+        <img className={styles.imgGlobal} src="/hugeglobal.svg"></img>
+      </main>
+      <section className={styles.wrapBottom}>
+        <div className={styles.sponsored}>
+          <div className={styles.netflix}></div>
+          <div className={styles.reddit}></div>
+          <div className={styles.amazon}></div>
+          <div className={styles.discord}></div>
+          <div className={styles.spotify}></div>
         </div>
-        
-        <div className={styles.sliderWrap}>
+        <div className={styles.testimonials}>
           <h1>
             Trusted by Thousands of Happy Customer
           </h1>
           <p>
-          These are the stories of our customers who have joined us with great pleasure when using this crazy feature.
+            These are the stories of our customers who have joined us with great pleasure when using this crazy feature.
           </p>
+          <div className={styles.testiContent}>
+            <div className={styles.testiContent1}>
+              <div className={styles.testiContentHead}>
+                <div className={styles.testiContentHeadAva}>
+                  <img src="/ava1.png"></img>
+                </div>
+                <div className={styles.testiContentHeadName}>
+                  <h2>Viezh Robert</h2>
+                  <a>Warsaw, Poland</a>
+                </div>
+                <div className={styles.testiContentHeadStar}>
+                  <h1>4.5</h1>
+                  <div><img src="/star.png"></img></div>
+                </div>
+              </div>
+              <div className={styles.testiContentText}>
+                <h1>
+                  “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.
+                </h1>
+              </div>
+            </div>
+            <div className={styles.testiContent2}>
+              <div className={styles.testiContentHead}>
+                <div className={styles.testiContentHeadAva}>
+                  <img src="/ava2.png"></img>
+                </div>
+                <div className={styles.testiContentHeadName}>
+                  <h2>Yessica Christy</h2>
+                  <a>Shanxi, China</a>
+                </div>
+                <div className={styles.testiContentHeadStar}>
+                  <h1>4.5</h1>
+                  <div><img src="/star.png"></img></div>
+                </div>
+              </div>
+              <div className={styles.testiContentText}>
+                <h1>
+                  “I like it because I like to travel far and still can connect with high speed.”
+                </h1>
+              </div>
+            </div>
+            <div className={styles.testiContent3}>
+              <div className={styles.testiContentHead}>
+                <div className={styles.testiContentHeadAva}>
+                  <img src="/ava3.png"></img>
+                </div>
+                <div className={styles.testiContentHeadName}>
+                  <h2>Kim Young Jou</h2>
+                  <a>Seoul, South Korea</a>
+                </div>
+                <div className={styles.testiContentHeadStar}>
+                  <h1>4.5</h1>
+                  <div><img src="/star.png"></img></div>
+                </div>
+              </div>
+              <div className={styles.testiContentText}>
+                <h1>
+                “This is very unusual for my business that currently requires a virtual private network that has high security.”.
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div className={styles.btnSlider}>
+            <div className={styles.btnSliderLeft}>
+              <div className={styles.btnSliderLeftDot}></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div className={styles.btnSliderRight}>
+              <div className={styles.btnSliderRightarLeft}></div>
+              <div className={styles.btnSliderRightarRight}></div>
+            </div>
+          </div>
         </div>
-
-        <div className={styles.subscribeWrap}>
-          <div>
+        <div className={styles.subscribe}>
+          <div className={styles.subscribeLeft}>
             <h1>
               Subscribe Now for Get Special Features!
             </h1>
@@ -166,24 +279,24 @@ export default function Home() {
               Let's subscribe with us and find the fun.
             </p>
           </div>
-          <div>
-            <button type="button">Subscribe Now</button>
-          </div> 
+          <div className={styles.subscribeRight}>
+            <button className={styles.btnSub} type="button">Subscribe Now</button>
+          </div>
         </div>
-      </main>
+      </section>
 
-      <footer>
-        <div className={styles.footerWrap}>
+      <footer className={styles.wrapFooter}>
+        <div className={styles.footer}>
           <div className={styles.footerAbout}>
             <img src="/Logo.png"></img>
             <h1>
               <span>LaslesVPN</span> is a private virtual network that has unique features and has high security.
             </h1>
-            <ul>
-              <li><img src="/Facebook.png"></img></li>
-              <li><img src="/Twitter.png"></img></li>
-              <li><img src="/Instagram.png"></img></li>
-            </ul>
+            <div className={styles.footerAboutImg}>
+              <img src="/Facebook.png"></img>
+              <img src="/Twitter.png"></img>
+              <img src="/Instagram.png"></img>
+            </div>
             <p>
               ©2020Lasles<span>VPN</span>
             </p>
