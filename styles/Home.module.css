@@ -224,6 +224,7 @@
   display: flex;
 }
 .pricing h1 {
+  width: 320px;
   height: 30px;
   font-weight: 500;
   font-size: 18px;
@@ -262,7 +263,7 @@
   display: flex;
 }
 .pricingFree .pricingFreeImg img {
-  padding: 0 25.61px 30.93px 75.19px;
+  padding: 7px 25.61px 23px 75.19px;
 }
 .pricingFree .pricingFreeP p {
   width: 210px;
@@ -286,7 +287,7 @@
   display: flex;
 }
 .pricingStandard .pricingStandardImg img {
-  padding: 0 25.61px 30.93px 75.19px;
+  padding: 7px 25.61px 23px 75.19px;
 }
 .pricingStandard .pricingStandardP p {
   width: 210px;
@@ -309,7 +310,7 @@
   display: flex;
 }
 .pricingPremium .pricingPremiumImg img {
-  padding: 0 25.61px 30.93px 75.19px;
+  padding: 7px 25.61px 23px 75.19px;
 }
 .pricingPremium .pricingPremiumP p {
   width: 210px;

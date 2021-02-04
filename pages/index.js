@@ -1,15 +1,15 @@
 
 import Head from 'next/head'
-import { useState } from 'react'
+// import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 export default function Home() {
 
-  const [halo, ds] = useState('LaslesVPN')
+  // const [halo, ds] = useState('LaslesVPN')
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>{halo}</title>
+        <title>LaslesVPN</title>
         <link rel="icon" href="/headLogo.png" />
       </Head>
       <nav className={styles.nav}>
