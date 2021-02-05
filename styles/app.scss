@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+body { 
+    font-family: 'Rubik', sans-serif;
+}
+
+a[href] {
+    color:#4F5665;
+    ;
+}
+
+.container {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    margin-top: 40px;
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        font-size: 16px;
+        margin-left: auto;
+        list-style: none;
+        margin-bottom: 20px;
+        font-weight: 300;
+        
+        .signin-item {
+            color: #000;
+            font-weight: 500;
+            margin-top: 14px;
+            
+        }
+
+        .signup-item {
+            font-weight: 500;
+            display: inline-block;
+            padding: 13px 45px;
+            border: 1px solid #F53855;
+            color: #F53855;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform .3s;
+
+            &:hover {
+                background-color: #F53855;
+                color: #fff;
+            }
+            
+        }
+
+        a[href] {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-decoration: none;
+            
+           
+            &:hover {
+                font-weight: 500;
+                transition: .5s;
+            }
+        }
+    }
+}
+
+.hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .container {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .text-wrapper {
+        width: 50%;
+        
+        &.w-full {
+            width: 100%;
+        }
+
+        .text-title {
+            font-weight: 500;
+            font-size: 50px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .logo-item {
+            font-family: 700;
+        }
+        .description {
+            font-size : 16px;
+            line-height: 30px;
+            font-weight: 300;
+            color:#4F5665;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            font-size: 16px;
+            display: inline-block;
+            padding: 17.5px 77.5px;
+            margin-top: 50px;
+            background-color:#F53838;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: transform .3s;
+            
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .image-wrapper {
+        width: 50%;
+        text-align: right;
+        
+    }
+}
+
+.card-wrapper {
+    display: flex;
+    width: 1140px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    box-shadow: 0 10px 10px -6px #333; /* all latest browser */
+    -moz-box-shadow: 0 10px 10px -6px #333; /* Firefox older version*/
+    -webkit-box-shadow: 0 10px 10px -6px #333; /* Chrome/Safari older version */
+    
+
+    .card-item {
+        width: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+
+        .card-image {
+            width: 55px;
+            max-width: 100%;
+
+        }
+
+        .card-name {
+            font-size: 25px;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+
+        .card-category {
+            color:#4F5665;
+            font-size: 20px;
+            font-weight: 400;
+
+        }
+    }
+}
+
+.text-wrapper-features {
+    padding-left: 100px;
+
+    .text-title-features {
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+    .description-features {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4F5665;
+        line-height: 30px;
+        list-style-image: url('/public/check-circle.svg');
+    }
+
+    .list-features {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4F5665;
+    }
+}
