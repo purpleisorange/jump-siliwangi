@@ -1,29 +1,16 @@
-
 import Head from 'next/head'
-// import { useState } from 'react'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
+import Testi from '../components/Testi'
 import styles from '../styles/Home.module.css'
 export default function Home() {
-
-  // const [halo, ds] = useState('LaslesVPN')
-
   return (
     <div className={styles.container}>
       <Head>
         <title>LaslesVPN</title>
         <link rel="icon" href="/headLogo.png" />
       </Head>
-      <nav className={styles.nav}>
-        <ul>
-          <img src="/Logo.png"></img>
-          <li>About</li>
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Testimonials</li>
-          <li>Help</li>
-          <li className={styles.signIn}>Sign In</li>
-          <button className={styles.signUp} type="button">Sign Up</button>
-        </ul>
-      </nav>
+      <NavBar />
       <div className={styles.wrap}>
         <div className={styles.about}>
           <div className={styles.aboutLeft}>
@@ -105,17 +92,17 @@ export default function Home() {
           Lets's choose the package that is best for you and explore it happily and cheerfully.
         </p>
         <div className={styles.pricing}>
-          <div className={styles.pricingFree}>
+          <div className={styles.pricingWrap}>
             <img src="/Free.png"></img>
             <h1>Free Plan</h1>
-            <div className={styles.pricingFreeDetail}>
-              <div className={styles.pricingFreeImg}>
+            <div className={styles.pricingDetail}>
+              <div className={styles.pricingImg}>
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
               </div>
-              <div className={styles.pricingFreeP}>
+              <div className={styles.pricingP}>
                 <p>Unlimites Bandwitch</p>
                 <p>Encrypted Connection</p>
                 <p>No Traffic Logs</p>
@@ -125,18 +112,18 @@ export default function Home() {
             <h2>Free</h2>
             <button type="button">Select</button>
           </div>
-          <div className={styles.pricingStandard}>
+          <div className={styles.pricingWrap}>
             <img src="/Free.png"></img>
             <h1>Standard Plan</h1>
-            <div className={styles.pricingStandardDetail}>
-              <div className={styles.pricingStandardImg}>
+            <div className={styles.pricingDetail}>
+              <div className={styles.pricingImg}>
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
               </div>
-              <div className={styles.pricingStandardP}>
+              <div className={styles.pricingP}>
                 <p>Unlimites Bandwitch</p>
                 <p>Encrypted Connection</p>
                 <p>Yes Traffic Logs</p>
@@ -147,11 +134,11 @@ export default function Home() {
             <h2><span>$9</span> / mo</h2>
             <button type="button">Select</button>
           </div>
-          <div className={styles.pricingPremium}>
+          <div className={styles.pricingWrap}>
             <img src="/Free.png"></img>
             <h1>Premium Plan</h1>
-            <div className={styles.pricingPremiumDetail}>
-              <div className={styles.pricingPremiumImg}>
+            <div className={styles.pricingDetail}>
+              <div className={styles.pricingImg}>
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
@@ -159,7 +146,7 @@ export default function Home() {
                 <img src="/checklist.png"></img>
                 <img src="/checklist.png"></img>
               </div>
-              <div className={styles.pricingPremiumP}>
+              <div className={styles.pricingP}>
                 <p>Unlimites Bandwitch</p>
                 <p>Encrypted Connection</p>
                 <p>Yes Traffic Logs</p>
@@ -169,7 +156,7 @@ export default function Home() {
               </div>
             </div>
             <h2><span>$12</span> / mo</h2>
-            <button className={styles.btnPremium} type="button">Select</button>
+            <button type="button">Select</button>
           </div>
         </div>
         <h1>
@@ -188,7 +175,8 @@ export default function Home() {
           <div className={styles.discord}></div>
           <div className={styles.spotify}></div>
         </div>
-        <div className={styles.testimonials}>
+        <Testi />
+        {/* <div className={styles.testimonials}>
           <h1>
             Trusted by Thousands of Happy Customer
           </h1>
@@ -269,7 +257,7 @@ export default function Home() {
               <div className={styles.btnSliderRightarRight}></div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className={styles.subscribe}>
           <div className={styles.subscribeLeft}>
             <h1>
@@ -285,53 +273,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className={styles.wrapFooter}>
-        <div className={styles.footer}>
-          <div className={styles.footerAbout}>
-            <img src="/Logo.png"></img>
-            <h1>
-              <span>LaslesVPN</span> is a private virtual network that has unique features and has high security.
-            </h1>
-            <div className={styles.footerAboutImg}>
-              <img src="/Facebook.png"></img>
-              <img src="/Twitter.png"></img>
-              <img src="/Instagram.png"></img>
-            </div>
-            <p>
-              ©2020Lasles<span>VPN</span>
-            </p>
-          </div>
-          <div className={styles.footerProduct}>
-            <h1>
-              Product
-            </h1>
-            <p>Download</p>
-            <p>Pricing</p>
-            <p>Locations</p>
-            <p>Server</p>
-            <p>Countries</p>
-            <p>Blog</p>
-          </div>
-          <div className={styles.footerEngage}>
-            <h1>
-              Engage
-            </h1>
-            <p>LaslesVPN ?</p>
-            <p>FAQ</p>
-            <p>Tutorial</p>
-            <p>About Us</p>
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
-          </div>
-          <div className={styles.footerEarn}>
-            <h1>
-              Earn Money
-            </h1>
-            <p>Affiliate</p>
-            <p>Become Partner</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
