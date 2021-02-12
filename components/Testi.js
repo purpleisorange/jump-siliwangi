@@ -18,10 +18,11 @@ export default class Testi extends Component {
     const settings = {
       dots: true,
       infinite: true,
+      focusOnSelect: true,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
-      // arrows: false,
+      arrows: false,
       appendDots: dots => (
         <div 
           style={{
@@ -55,7 +56,7 @@ export default class Testi extends Component {
       </p>
       <div className={styles.testiContent}>
         <Slider ref={c => (this.slider = c)} {...settings}>
-          <div className={styles.testiContent1}>
+          <div className={styles.testiContentWrap}>
             <div className={styles.testiContentHead}>
               <div className={styles.testiContentHeadAva}>
                 <img src="/ava1.png"></img>
@@ -75,7 +76,7 @@ export default class Testi extends Component {
               </h1>
             </div>
           </div>
-          <div className={styles.testiContent2}>
+          <div className={styles.testiContentWrap}>
             <div className={styles.testiContentHead}>
               <div className={styles.testiContentHeadAva}>
                 <img src="/ava2.png"></img>
@@ -95,7 +96,7 @@ export default class Testi extends Component {
               </h1>
             </div>
           </div>
-          <div className={styles.testiContent3}>
+          <div className={styles.testiContentWrap}>
             <div className={styles.testiContentHead}>
               <div className={styles.testiContentHeadAva}>
                 <img src="/ava3.png"></img>
@@ -115,7 +116,7 @@ export default class Testi extends Component {
               </h1>
             </div>
           </div>
-          <div className={styles.testiContent3}>
+          <div className={styles.testiContentWrap}>
             <div className={styles.testiContentHead}>
               <div className={styles.testiContentHeadAva}>
                 <img src="/ava3.png"></img>
@@ -135,7 +136,7 @@ export default class Testi extends Component {
               </h1>
             </div>
           </div>
-          <div className={styles.testiContent3}>
+          <div className={styles.testiContentWrap}>
             <div className={styles.testiContentHead}>
               <div className={styles.testiContentHeadAva}>
                 <img src="/ava3.png"></img>
