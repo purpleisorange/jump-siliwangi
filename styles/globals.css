@@ -23,6 +23,7 @@ a{
 /* ===== DOT SLICK ===== */
 .button__bar {
   margin-top: 80px;
+  margin-right: -150px;
   width: 100%;
   padding: 0;
   float: right;
@@ -46,6 +47,7 @@ a{
   width: 15px;
   border-radius: 7.5px;
   outline: 0;
+  transition: 0.3s
 }
 
 .button__bar li.slick-active button {
@@ -54,3 +56,5 @@ a{
   width: 35px;
   outline: 0;
 }
+
+

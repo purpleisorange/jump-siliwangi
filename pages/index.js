@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
-import Testi from '../components/Testi'
+// import Footer from '../components/Footer'
+// import Testi from '../components/Testi'
+import Testi from "../components/Testimonials/index";
+import Footer from "../components/Footer/index";
 import styles from '../styles/Home.module.css'
 export default function Home() {
   return (

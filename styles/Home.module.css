@@ -294,12 +294,13 @@
 
 /* Sponsored */
 .wrapBottom {
-  padding: 0 150px;
+  /* padding: 0 150px; */
   position: relative;
   padding-bottom: 1px;
 }
 .sponsored {
   width: 1135.64px;
+  margin: 0 150px;
   height: 208.32px;
   display: flex;
   padding: 74.16px 0;
@@ -330,7 +331,6 @@
 
 /* Testimonials */
 .testimonials {
-  width: 1290px;
   height: 590px;
   margin-bottom: 181.52px;
 }
@@ -356,6 +356,9 @@
 .testimonials .testiContent .Slider {
   display: flex;
 }
+.testiContent {
+  background-color: aqua;
+}
 .slidWrap {
   margin-right: 50px;
   outline: none;
@@ -370,6 +373,9 @@
   padding: 30px;
   /* box-shadow: 0px 45px 20px rgba(13, 16, 37, 0.06); */
   /* border: 2px solid #F53838; */
+}
+.testiContentWrap :global(.slick-active) {
+  border: 2px solid #F53838;
 }
 .testimonials .testiContent .testiContentWrap:active{
   box-shadow: 0px 25px 20px rgba(13, 16, 37, 0.06);
@@ -478,6 +484,7 @@
 .subscribe {
   width: 1140px;
   height: 233px;
+  margin: 0 150px;
   background-color: #ffffff;
   border-radius: 10px;
   border: none;
